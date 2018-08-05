@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Corail Design",
+  "description": "Accurate, secure and private autofill that will make your life easier.",
+  "version": "3.1.5",
+  "author": "Made with love <3",
+
+  "permissions": [
+                "http://*/",
+                "https://*/",
+                "tabs",
+                "storage"
+  ],
+  "optional_permissions": [
+              "http://*/",
+              "https://*/",
+             	"webRequest"
+  ],
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+    "css" : ["styles_visited_pages.css"]
+
+  }
+  ]
+}
